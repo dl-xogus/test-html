@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="red">red</div>      <!-- 특정 태그에 이름을 지정하는 방법 class -->
+    <div id="blue">blue</div>       <!-- id로 이름을 다는 방식도 있음 (자주 사용하지 않음) -->
+
+    <div class="contents">          <!-- 모든 태그에 이름을 달면 코드가 지저분 해지기 때문에 최상위 부모에만 달아주는게 좋음 -->
+        <p>con01</p>
+        <p>con02</p>
+        <p>con03</p>
+    </div>
+
+    <div class="contents2">
+        <div>
+            <p>con01</p>
+            <p>con02</p>
+        </div>
+    </div>
+
+    <div class="tag-name">
+        <h2>class 이름 지정</h2>
+        <ul>
+            <li>
+                태그에 class속성을 이용하여 값을 지정한다.<br>
+                div class="이름"
+            </li>
+            <li>
+                css문서안에서 대상자에게 명령을 주려면<br>
+                .클래스명 {   }
+            </li>
+        </ul>
+    </div><br><br>
+
+    <div class="tag-name font">                <!-- tag-name의 영향을 받음 -->
+        <h2>Font Style</h2>
+        <ul>
+            <li>font-size(사이즈)</li>          <!-- 여기서 부터 -->
+            <li>font-weight(굵기)</li>
+            <li>font-family(종류)</li>
+            <li>font-style(기울기)</li>
+            <li>color(색상)</li>
+            <li>line-height(줄간격)</li>        <!-- 여기까지 많이 씀 -->
+            
+            <li>letter-spacing(글자간)</li>
+            <li>text-align(정렬)</li>
+            <li>text-decoration(밑줄)</li>
+            <li>text-transform(영문만 사용-대소문자 표현)</li>
+        </ul>
+    </div><br><br>
+
+    <div class="tag-name">
+        <h2>여백 - padding(내부), margin(외부)</h2>
+        <ul>
+            <li>
+                padding(내부)<br><br>
+                <!-- 한줄 표현식 -->
+                padding: 30px; (상하좌우)<br>
+                padding: 30px 50px; (상하, 좌우)<br>
+                padding: 30px 50px 20px; (상, 좌우, 하)<br>
+                padding: 30px 50px 20px 30px; (상, 우, 하, 좌)<br><br>      <!-- 시계방향으로 생각하면 쉬움 -->
+                <!-- 개별 표현식 -->
+                padding-left: 30px;<br>
+                padding-right: 30px;<br>
+                padding-top: 40px;<br>
+                padding-bottom: 20px;<br>
+            </li>
+            <li>
+                margin(외부)<br><br>            
+                <!-- 한줄 표현식 -->
+                margin: 30px; (상하좌우)<br>
+                margin: 30px auto; (상하, 좌우)<br>
+                margin: 30px auto 20px; (상, 좌우, 하)<br>
+                margin: 30px auto 20px auto; (상, 우, 하, 좌)<br><br>      <!-- 시계방향으로 생각하면 쉬움 -->
+                <!-- 개별 표현식 -->
+                margin-left: 30px;<br>
+                margin-right: 30px;<br>
+                margin-top: 40px;<br>
+                margin-bottom: 20px;<br><br>
+
+                ※ 좌, 우측에 auto값을 사용할 수 있음.<br>
+                └ 남아 있는 공간을 각 방향에 똑같이 나눠 줌.
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

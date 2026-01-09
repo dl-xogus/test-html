@@ -50,16 +50,23 @@ body {           /* body태그에 속성을 걸어둠 */
 
 /* ================================================================================== */
 
-.font li:nth-of-type(1) {font-size: 24px;}
-.font li:nth-of-type(2) {font-weight: bold;}                    /* font가 지원하는지 확인 (숫자로도 가능(font-weight: 700;)) */
-.font li:nth-of-type(3) {font-family: 'bauhaus 93';}
-.font li:nth-of-type(4) {font-style: italic;}
-.font li:nth-of-type(5) {color: red;}
-.font li:nth-of-type(6) {line-height: 3;}
-.font li:nth-of-type(7) {letter-spacing: 10px;}
-.font li:nth-of-type(8) {text-align: center;}                   /* left | center | right */
-.font li:nth-of-type(9) {text-decoration: line-through;}        /* underline(하단) | line-throght(중앙) | overline(상단) */
-.font li:nth-of-type(10) {text-transform: uppercase;}           /* capitalize(첫스펠링 대문자) |  lowercase(소문자) | uppercase(대문자) */
+.font li:nth-of-type(1) { font-size: 24px; }
+.font li:nth-of-type(2) { font-weight: bold; }                    /* font가 지원하는지 확인 (숫자로도 가능(font-weight: 700;)) */
+.font li:nth-of-type(3) { font-family: 'bauhaus 93'; }
+.font li:nth-of-type(4) { font-style: italic; }
+.font li:nth-of-type(5) { color: red; }
+.font li:nth-of-type(6) { line-height: 3; }
+.font li:nth-of-type(7) { letter-spacing: 10px; }
+.font li:nth-of-type(8) { text-align: center; }                   /* left | center | right */
+.font li:nth-of-type(9) { text-decoration: line-through; }        /* underline(하단) | line-throght(중앙) | overline(상단) */
+.font li:nth-of-type(10) { text-transform: uppercase; }           /* capitalize(첫스펠링 대문자) |  lowercase(소문자) | uppercase(대문자) */
 
 /* ================================================================================== */
 
+.mp li { white-space: pre-line; }       /* 입력한 그대로 보여줌(<br>같은거 안써도 쓴대로 보여짐), 되도록 쓰지 않는게 좋음 */
+.m-auto {
+    width: 100px; height: 100px;
+    background-color: yellow;
+    border: 1px solid red;
+    margin: 50px auto;
+}

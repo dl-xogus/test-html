@@ -70,3 +70,23 @@ body {           /* body태그에 속성을 걸어둠 */
     border: 1px solid red;
     margin: 50px auto;
 }
+
+/* ================================================================================== */
+
+.line > span {
+    border: 10px solid red;
+    padding: 30px;
+    display: inline-block;                  /* 영역을 침범하지 못하게 해줌 */
+    /* display: block;                         inline태그인 span을 되도록이면 강제로 바꾸지 말것 */
+}
+
+.line > span:nth-of-type(1) { border-style: solid; }
+.line > span:nth-of-type(2) {
+    border-style: dotted;
+
+    border: none;                           /* none처리를 해 border삭제 */
+    border-bottom: 5px dotted blue;       /* 다시 border를 생성해줌 */
+}
+.line > span:nth-of-type(3) {
+    border-style: dashed solid dotted;             /* padding, margin과 똑같이 상하좌우를 다 따로 해당가능 */
+}

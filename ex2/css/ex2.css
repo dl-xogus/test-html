@@ -11,7 +11,13 @@ body { margin: 0; }
     justify-content: space-between;
 }
 
-.box > img { width: 50%; }
+.box > img {
+    width: 50%;
+    transition: 0.5s;                       /* 변경 애니메이션 (hover에 넣으면 올릴때만 애니메이션이 걸림) */
+}
+.box > img:hover { width: 51%; }            /* :hover 마우스를 올리면 변경 */
+.box:hover > img { width: 51%; }            /* 앞쪽 .box에 :hover를 달아주면 box에 마우스를 올리면 img가 변경 */
+
 .box > div { width: 45%; }
 
 .detail { margin-bottom: 50px; }
@@ -32,8 +38,13 @@ body { margin: 0; }
     display: inline-block;
     color: black;
     text-decoration: none;
+    transition: 0.5s;
 }
 .btn:hover {
+    background-color: green;
+    color: white;
+}
+.box:hover > div > .btn {
     background-color: green;
     color: white;
 }

@@ -1,0 +1,55 @@
+body { margin: 0; }
+
+.ly_s1 {
+    width: 600px;
+    border: 10px solid black;
+    display: flex;                      /* 가로 정렬 오토레이아웃 */
+    justify-content: space-between;     /* 정렬 방식 : [ flex-end (오른쪽 끝으로) | space-between (좌우 끝으로) ] 이 두개를 제일 많이 씀 */
+    flex-wrap: wrap;                    /* Figma에서 오토레이아웃의 랩과 같은 기능 */
+
+}
+.ly_s1 > p {
+    padding: 100px;
+    margin: 0;
+}
+.ly_s1 > p:nth-of-type(1) { background-color: red; }
+.ly_s1 > p:nth-of-type(2) { background-color: blue; }
+
+.ly_s2 {
+    width: 600px;
+    height: 400px;
+    border: 10px solid black;
+
+    display: flex;                  /* flex를 해놔야 정렬 기능을 사용가능 */
+    justify-content: center;        /* 가로 중앙 정렬 */
+    align-items: center;            /* 세로 중앙 정렬 [ center (중앙) | flex-end (하단) ] */
+
+    margin-top: 50px;
+}
+
+.ly_s3 {
+    width: 600px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;                 /* 정렬 후 간격을 줄 수 있음 (한줄 표현식) */
+    
+    /*
+    gap의 부분 지정
+    column-gap: 50px;             가로 gap
+    row-gap: 20px;                세로 gap
+    */
+}
+.ly_s3 > p {
+    padding: 100px;
+    background-color: green;
+    margin: 0;
+}
+
+/* 
+    display: flex;
+    flex-wrap: wrap;                    (리스트 형식-한줄씩 묶음)
+    justify-content: flex-start;        (가로 정렬)
+    align-item: center;                 (세로 정렬)
+    gap: 20px 50px;                     (아이템 간격 조정)
+*/

@@ -1,4 +1,4 @@
-@import url('../../css/reset.css');
+@import url('../../css/reset.css');         /* css에서 파일을 호출하는 방식 */
 
 .box {
     border: 1px solid rgb(128, 128, 128);
@@ -46,3 +46,4 @@
     color: #555;
 
 }
+

@@ -53,3 +53,22 @@ body { margin: 0; }
     align-item: center;                 (세로 정렬)
     gap: 20px 50px;                     (아이템 간격 조정)
 */
+
+.ly_s4 {
+    width: 600px;
+    border: 1px solid black;
+    display: flex;
+}
+.ly_s4 > p {
+    margin: 0;
+    /* width: 33.3333%; */
+    flex-grow: 1;               /* 남은 공간을 지정된 비율만큼 나누어 가진다 */
+    height: 300px;
+    background-color: lightgray;
+}
+.ly_s4 > p:nth-of-type(2) { background-color: pink; }
+.ly_s4 > p:nth-of-type(3) { background-color: skyblue; }
+
+.ly_s4 > p:hover {
+    flex-grow: 5;               /* 1:5:1 같은 방식으로 width의 사이즈를 조절가능하게됨 */
+}

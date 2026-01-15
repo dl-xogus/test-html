@@ -1,0 +1,45 @@
+.box {
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 30px;
+    width: 1000px;
+    margin: 100px auto;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.box > .content {
+    width: 47%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.box > .content:hover { background-color: #dddddd; }
+
+.content > p {
+    margin: 0;
+    width: 50%;
+    height: 140px;
+    border-radius: 20px;
+    overflow: hidden;           /* 넘어서는 영역 숨김 */
+}
+.content img {
+    width: 100%;
+    transition: 0.3s;
+}
+.content img:hover { transform: scale(1.2); }       /* 이렇게하면 중앙에서부터 커짐 */
+
+.details {
+    width: 50%;
+    padding: 0 20px;
+}
+.details > h2 {
+    margin: 0 0 10px;
+    font-size: 25px;
+}
+.details > p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}

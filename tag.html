@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            width: 1000px;
+            margin: 100px auto;
+        }
+        body > div {
+            border: 1px solid black;
+            padding: 40px;
+            margin: 60px 0;
+        }
+        body > div > h2 {
+            font-size: 2rem;
+        }
+        hr { display: none; }
+    </style>
 </head>
 <body>
     <!-- ctrl + / 주석 -->
@@ -72,5 +87,59 @@
         <h3>h3은 block태그여서 내용으로 포함할 수 없음</h3>
         <div>div는 block태그여서 내용으로 포함할 수 없음</div>
     </p>
+
+    <!-- ================================================================================================================== -->
+
+    <div>
+        <h2>article</h2>
+        <div>* 기사, 블로그와 같은 제목과 내용이 함꼐 존해하는 콘텐츠</div>
+        <div>* h태그가 없으면 웹표준에 맞지 않음 (제목에 사용)</div>
+        <div>* display: black;</div>
+    </div>
+
+    <!-- 표 만들기 -->
+    <!--
+        table : 표를 감싸는 태그
+        tr : 표 내부의 행 (table row)
+        th : 행 내부의 제목 셀 (table heading)
+        td : 행 내부의 일반 셀 (table data)
+
+        (반응형 웹에 사용하기 어렵기 때문에 이젠 table태그를 자주 사용하지 않음)
+    -->
+    <div>
+        <h2>table(표 만들때 사용)</h2>
+        <table border="1px" width="100%" cellspacing="20px" cellpadding="20px">         <!-- css파일을 안만들어서 이렇게 함 -->
+            <caption>ex) 게시판</caption>       <!-- caption : 표 머리 제목 태그 -->
+            
+            <thead>     <!-- thead : 제목 셀 태그 -->
+                <tr>
+                    <th>순번</th>
+                    <th>제목</th>
+                    <th>날짜</th>
+                </tr>
+            </thead>
+            
+            <tbody>     <!-- tbody : 일반 셀 태그 -->
+                <tr>
+                    <td>1</td>
+                    <td>공지사항입니다.</td>
+                    <td>2026-01-16</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>공지사항입니다.</td>
+                    <td>2026-01-16</td>
+                </tr>
+            </tbody>
+            
+            <tfoot>     <!-- tfoot : 표 꼬리 태그 -->
+                <tr>
+                    <td colspan="3">    <!-- colspan : 3만큼 가로 셀 병합 -->
+                        1 2 3 4 5
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 </body>
 </html>

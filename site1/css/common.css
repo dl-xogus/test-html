@@ -1,0 +1,43 @@
+/* 공통 스타일 */
+
+html { font-size: 16px; }
+body { color: #555; }
+
+.spot > div > a { transition: 0.3s; }
+.spot > div > a:hover { transform: scale(0.95); }
+
+section {
+    text-align: center;
+    width: 1300px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.title > h2 {
+    color: black;
+    font-size: 40px;
+    text-transform: uppercase;          /* 대문자로 변환 */
+}
+.title > p {
+    padding-top: 10px;
+    color: #555;
+}
+
+.contents {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 70px;
+}
+
+.contents > figure > p { overflow: hidden; }
+.contents > figure > p > img { transition: 0.3s; }
+.contents > figure > p:hover > img { transform: scale(1.2); }
+
+.contents > figure > figcaption > b {
+    text-transform: uppercase;
+    color: black;
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    display: inline-block;
+}
+.contents > figure > figcaption > p { line-height: 1.6; }

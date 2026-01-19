@@ -1,0 +1,88 @@
+@import url('./reset.css');
+@import url('./common.css');
+
+/* 인덱스 페이지 내용 */
+.spot {
+    width: 100vw;                   /* 사용자 해상도 맞게 꽉채움 */
+    height: 100vh;
+    background: url('../imgs/img_main-spot.jpg') 0 0 / cover no-repeat;
+    
+    /* div한테 flex를 주면 안됨 (div를 중앙 정렬 시킬것이기 때문에) */
+    display: flex;                  /* 알아서 내용에 맞게 div의 사이즈도 조절해줌 */
+    justify-content: center;        /* 가로 중앙 정렬 */
+    align-items: center;            /* 세로 중앙 정렬 */
+    text-align: center;
+}
+.spot > div { color: white; }
+.spot > div > b { font-size: 62px; }
+.spot > div > p {
+    font-size: 20px;
+    padding: 20px 0 30px;
+}
+.spot > div > a {
+    color: inherit;                 /* 부모의 값을 상속받음 / a태그는 이미 color값을 갖고있어서 a태그한테는 상속명령어를 넣어줘야함 */
+    background-color: #593CFB;
+    padding: 10px 30px;
+    display: inline-block;
+    font-weight: bold;
+}
+/* 
+    1. 발생문제
+    ㄴ 모든 컨텐츠를 화면에 중앙 정렬
+    2. 해결방법
+    ㄴ 모든 컨텐츠를 div로 묶음
+    ㄴ div 부모 태그에 flex명령
+    */
+
+    
+/* about============================================ */
+.about .contents > figure {
+    flex: 1;
+    padding: 0 20px;
+    min-width: 330px;
+}
+.about .contents > figure > p {
+    width: 160px; height: 160px;
+    background-color: #593CFB;
+    border-radius: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* line-height: 160px;                 height의 크기만큼 줄간격을 잡아주면 아이콘이 중앙으로 오게 됨 (flex를 안쓰고 중앙으로 옮기는 방법(1줄짜리만 가능함)(p의 크기가 달라지면 중앙이 아니게 됨)) */
+}
+
+/* portfolio======================================== */
+.portfolio {
+    background-color: #D9D9D9;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.portfolio .contents {
+    max-width: 1300px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* contect========================================== */
+.contect {
+    background-color: #333333;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contect .title { padding-bottom: 70px; }
+.contect .title > h2 { color: white; }
+.contect .title > p { color: white; }
+.contect > p {
+    padding-top: 70px;
+    width: 1000px;
+    height: 600px;
+    overflow: scroll;
+}
+.contect > p { padding: 0; }

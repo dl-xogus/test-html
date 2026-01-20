@@ -13,15 +13,15 @@
             <h1 class="logo"><a href="#">FIGMA</a></h1>
             
             <ul>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">CONTECT</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#contect">CONTECT</a></li>
             </ul>
         </div>
     </header>
     
     <main>
-        <div class="spot">
+        <div id="spot">
             <div>
                 <b>MARKETING COORDINATOR</b>
                 <p>LOREM IPSUM DOLOR SIT AMET</p>
@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <section class="about">
+        <section id="about">
             <!-- about -->
             <div class="title">
                 <h2>about</h2>
@@ -63,7 +63,7 @@
             </div>
         </section>
 
-        <section class="portfolio">
+        <section id="portfolio">
             <!-- portfoilo -->
             <div class="title">
                 <h2>portfolio</h2>
@@ -121,18 +121,27 @@
             </div>
         </section>
 
-        <section class="contect">
+        <section id="contect">
             <!-- contect -->
             <div class="title">
                 <h2>contect</h2>
                 <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
             </div>
-
-            <p><img src="./imgs/map.png" alt="지도"></p>
+            
+            <!-- 카카오 지도 -->
+            <div id="daumRoughmapContainer1768881581524" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+            <script charset="UTF-8">
+            	new daum.roughmap.Lander({
+            		"timestamp" : "1768881581524",
+            		"key" : "fx9tzuhkei7",
+            		"mapWidth" : "1300",
+            		"mapHeight" : "500"
+            	}).render();
+            </script>
         </section>
     </main>
 
     <footer></footer>
 </body>
 </html>
-

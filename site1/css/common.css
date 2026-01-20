@@ -11,6 +11,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 0.2s;
 }
 
 .title { padding-bottom: 70px; }
@@ -33,7 +34,11 @@ section {
     flex-wrap: wrap;
     gap: 20px;
 }
-.contents > figure { max-width: 420px; }
+.contents > figure {
+    max-width: 420px;
+    padding: 20px 0;
+    transition: 0.3s;
+}
 .contents > figure > figcaption { padding: 0 20px; }
 .contents > figure > figcaption > b {
     text-transform: uppercase;

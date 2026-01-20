@@ -117,8 +117,9 @@ header > div > ul > li > a:hover {
 #contect { background-color: #333333; }
 #contect .title > h2 { color: white; }
 #contect .title > p { color: white; }
-#contect > p {
-    width: 100vw; height: 600px;
-    max-width: 1000px;
-    overflow: scroll;
-}
+
+/* 카카오 지도 */
+.root_daum_roughmap .cont .section .address .tit { color: white; }
+.root_daum_roughmap .cont .section .address .txt { color: white; }
+.root_daum_roughmap .cont .section .phone .tit { color: white; }
+.root_daum_roughmap .cont .section .phone .txt { color: white; }

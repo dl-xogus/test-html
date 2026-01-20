@@ -2,30 +2,69 @@
 @import url('./common.css');
 
 /* 인덱스 페이지 내용 */
+
+/* header========================================== */
+header {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    display: flex;
+}
+header > div {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+header > div > .logo > a {
+    color: white;
+    padding: 0 20px;
+}
+header > div > ul {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+}
+header > div > ul > li > a { 
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+header > div > ul > li > a:hover {
+    /* font-size: 16.5px;
+    font-weight: bold; */
+    color: #593CFB;
+} 
+
+/* spot============================================ */
 .spot {
-    width: 100vw;                   /* 사용자 해상도 맞게 꽉채움 */
-    height: 100vh;
-    background: url('../imgs/img_main-spot.jpg') 0 0 / cover no-repeat;
+    width: 100%;                    /* 사용자 해상도 맞게 꽉채움 */
+    height: 100vh;                  /* 사용자 해상도 맞게 꽉채움 */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../imgs/img_main-spot.jpg') 0 0 / cover no-repeat;
     
-    /* div한테 flex를 주면 안됨 (div를 중앙 정렬 시킬것이기 때문에) */
+    /* div한테 flex를 주면 안됨 (div를 중앙에 정렬 시킬것이기 때문에) */
     display: flex;                  /* 알아서 내용에 맞게 div의 사이즈도 조절해줌 */
     justify-content: center;        /* 가로 중앙 정렬 */
     align-items: center;            /* 세로 중앙 정렬 */
-    text-align: center;
 }
 .spot > div { color: white; }
-.spot > div > b { font-size: 62px; }
+.spot > div > b {
+    font-size: 62px;}
 .spot > div > p {
     font-size: 20px;
     padding: 20px 0 30px;
 }
 .spot > div > a {
     color: inherit;                 /* 부모의 값을 상속받음 / a태그는 이미 color값을 갖고있어서 a태그한테는 상속명령어를 넣어줘야함 */
+    font-weight: bold;
     background-color: #593CFB;
     padding: 10px 30px;
     display: inline-block;
-    font-weight: bold;
+    transition: 0.3s;
 }
+.spot > div > a:hover { transform: scale(0.95); }
 /* 
     1. 발생문제
     ㄴ 모든 컨텐츠를 화면에 중앙 정렬
@@ -34,55 +73,48 @@
     ㄴ div 부모 태그에 flex명령
     */
 
-    
 /* about============================================ */
 .about .contents > figure {
-    flex: 1;
-    padding: 0 20px;
-    min-width: 330px;
+    padding: 20px;
+    max-width: 420px;
+    transition: 0.3s;
+}
+.about .contents > figure:hover {
+    background-color: #eee;
+    border-radius: 30px;
 }
 .about .contents > figure > p {
-    width: 160px; height: 160px;
     background-color: #593CFB;
+    width: 160px; height: 160px;
     border-radius: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     /* line-height: 160px;                 height의 크기만큼 줄간격을 잡아주면 아이콘이 중앙으로 오게 됨 (flex를 안쓰고 중앙으로 옮기는 방법(1줄짜리만 가능함)(p의 크기가 달라지면 중앙이 아니게 됨)) */
+    transition: 0.3s;
+}
+.about .contents > figure:hover > p {
+    background-color: #fb3c3c;
+    border-radius: 15%;
 }
 
 /* portfolio======================================== */
-.portfolio {
-    background-color: #D9D9D9;
-    width: 100vw;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.portfolio { background-color: #D9D9D9; }
+.portfolio .contents { margin: 0 20px; }
+.portfolio .contents > figure > p { overflow: hidden; }
+.portfolio .contents > figure > p > img {
+    width: 100%;
+    transition: 0.3s;
 }
-.portfolio .contents {
-    max-width: 1300px;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+.portfolio .contents > figure:hover > p > img { transform: scale(1.2); }
 
 /* contect========================================== */
-.contect {
-    background-color: #333333;
-    width: 100vw;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.contect .title { padding-bottom: 70px; }
+.contect { background-color: #333333; }
 .contect .title > h2 { color: white; }
 .contect .title > p { color: white; }
 .contect > p {
-    padding-top: 70px;
-    width: 1000px;
-    height: 600px;
+    width: 100vw; height: 600px;
+    max-width: 1000px;
     overflow: scroll;
 }
-.contect > p { padding: 0; }

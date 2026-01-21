@@ -1,0 +1,88 @@
+/* 초기값 세팅 */
+body { margin: 0; }                     /* 값을 넣지 않으면 기본값으로 margin: 8px;가 들어가있음 */
+* { box-sizing: border-box; }           /* 패딩 보더 값 포함해서 가로사이즈에 맞춰 줌 */
+
+/* =========================================================================================== */
+
+.box {
+    border: 1px solid black;
+    width: 400px;
+    padding: 40px;
+    margin: 100px auto;
+}
+.box > h2 { font-size: 32px; }
+.box > p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+.box > p > span { color: red; }
+.box > a {
+    border: 1px solid black;
+    background-color: #f2ff00;
+    padding: 10px 30px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+
+/* =========================================================================================== */
+
+.box2 {
+    border: 1px solid black;
+    width: 400px;
+    padding: 40px;
+    margin: 100px auto;
+}
+.box2 > img { width: 100%; }
+.box2 > div { padding: 10px; }
+.box2 > div > h2 { font-size: 32px; }
+.box2 > div > p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin: 0 0 50px;
+}
+.box2 > div > a {
+    border: 1px solid black;
+    background-color: #f2ff00;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+/* =========================================================================================== */
+
+.box3 {
+    border: 1px solid black;
+    width: 1400px;
+    padding: 60px 80px;
+    margin: 100px auto;
+}
+.box3 > h2 {
+    font-size: 50px;
+    margin: 0 0 30px;
+}
+.bg {
+    background: url('../../image/ex.jpg') 0 0 / 1400px no-repeat;
+    padding: 300px 0;
+    color: white;
+    text-align: center;
+}
+.bg .txt > b { font-size: 50px; }
+.bg .txt > p {
+    font-size: 23px;
+    margin: 10px 0 50px;
+}
+.bg .btn > a {
+    border: 1px solid black;
+    padding: 10px 30px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+}
+.bg .btn .btn_fill { background-color: yellow; }
+.bg .btn .btn_stroke { background-color: whitesmoke; }

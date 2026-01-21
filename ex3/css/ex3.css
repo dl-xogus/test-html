@@ -28,7 +28,7 @@
 }
 .content img {
     width: 100%;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .content img:hover { transform: scale(1.2); }       /* 이렇게하면 중앙에서부터 커짐 */
 
@@ -44,6 +44,4 @@
     margin: 0;
     font-size: 16px;
     color: #555;
-
 }
-

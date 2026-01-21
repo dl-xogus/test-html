@@ -1,0 +1,36 @@
+body {
+    color: #2f2f2f;
+    font-family: 'Montserrat';
+    overflow-x: hidden;
+}
+
+section {
+    padding: 160px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 64px;
+}
+.title > div > small {
+    font-size: 24px;
+}
+.title > div > h2 {
+    font-size: 64px;
+}
+.title > a {
+    font-size: 20px;
+    
+}
+.title > a::after {
+    content: url('../img/icon_right.svg');
+    padding-left: 10px;
+}

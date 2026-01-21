@@ -1,0 +1,82 @@
+@import url('./reset.css');
+
+body {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+article {
+    width: 60%;
+    margin: 100px auto;
+}
+article h2 {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+article div {
+    padding: 30px;
+    border: 1px solid black;
+}
+
+/* absolute=========================================== */
+.pos-absolute > p {
+    padding: 100px;
+    background-color: orange;
+    
+    position: absolute;
+    right: 0%; top: 0%;
+}
+
+/* fixed============================================== */
+.pos-fixed > p {
+    padding: 30px;
+    background-color: red;
+    
+    position: fixed;
+    right: 0%; top: 0%;
+}
+
+/* relative & absolute================================ */
+.pos-relative-absolute > p {
+    position: relative;                                 /* p태그를 기준으로 잡음 */
+    overflow: hidden;
+}
+.pos-relative-absolute > p > img { width: 100%; }
+.pos-relative-absolute > p > span {
+    position: absolute;                                 /* p태그를 기준으로 고정 */
+    left: 0; bottom: -80px;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgba(173, 255, 47, 0.6);
+    transition: 0.5s;
+}
+.pos-relative-absolute > p:hover > span {
+    bottom: 0;
+}
+
+/* sticky============================================= */
+body {height: 5000px;}
+.pos-sticky {
+    height: 1000px;
+    background-color: #eee;
+}
+.pos-sticky > p {
+    position: sticky;
+    top: 0;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+}
+.pos-sticky > p:nth-of-type(2) {
+    background-color: yellow;
+    top: 30px;
+    color: black;
+}
+.pos-sticky > p:nth-of-type(3) {
+    background-color: orchid;
+    top: 60px;
+}

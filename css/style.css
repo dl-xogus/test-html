@@ -27,7 +27,7 @@ body {           /* body태그에 속성을 걸어둠 */
     background-color: violet;
 }
 
-/* ================================================================================== */
+/* class 이름 지정 ================================================================================== */
 
 .tag-name {
     border: 1px solid black;
@@ -48,7 +48,7 @@ body {           /* body태그에 속성을 걸어둠 */
     padding: 15px 0;
 }
 
-/* ================================================================================== */
+/* Font Style ================================================================================== */
 
 .font li:nth-of-type(1) { font-size: 24px; }
 .font li:nth-of-type(2) { font-weight: bold; }                    /* font가 지원하는지 확인 (숫자로도 가능(font-weight: 700;)) */
@@ -61,7 +61,7 @@ body {           /* body태그에 속성을 걸어둠 */
 .font li:nth-of-type(9) { text-decoration: line-through; }        /* underline(하단) | line-throght(중앙) | overline(상단) */
 .font li:nth-of-type(10) { text-transform: uppercase; }           /* capitalize(첫스펠링 대문자) |  lowercase(소문자) | uppercase(대문자) */
 
-/* ================================================================================== */
+/* 여백 - padding(내부), margin(외부) ================================================================================== */
 
 .mp li { white-space: pre-line; }       /* 입력한 그대로 보여줌(<br>같은거 안써도 쓴대로 보여짐), 되도록 쓰지 않는게 좋음 */
 .m-auto {
@@ -71,7 +71,7 @@ body {           /* body태그에 속성을 걸어둠 */
     margin: 50px auto;
 }
 
-/* ================================================================================== */
+/* 외각선 (border) ================================================================================== */
 
 .line > span {
     border: 10px solid red;
@@ -83,10 +83,44 @@ body {           /* body태그에 속성을 걸어둠 */
 .line > span:nth-of-type(1) { border-style: solid; }
 .line > span:nth-of-type(2) {
     border-style: dotted;
-
+    
     border: none;                           /* none처리를 해 border삭제 */
     border-bottom: 5px dotted blue;       /* 다시 border를 생성해줌 */
 }
 .line > span:nth-of-type(3) {
-    border-style: dashed solid dotted;             /* padding, margin과 똑같이 상하좌우를 다 따로 해당가능 */
+    border-style: dashed solid dotted;      /* padding, margin과 똑같이 상하좌우를 다 따로 해당가능 */
 }
+
+/* 배경 (색, 그라이언트, 이미지) ================================================================================== */
+
+.bg > p {
+    border: 1px solid black;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.bg > p:nth-of-type(1) { background: yellow url('../image/ex.jpg') 0 0 / cover no-repeat fixed; }       /* ../ 는 해당폴더의 상위폴더 */
+.bg > p:nth-of-type(2) { background-color: red; }
+.bg > p:nth-of-type(3) { background-image: url('../image/너구리.jpg'); }
+.bg > p:nth-of-type(4) {
+    background-image: url('../image/너구리.jpg');
+    background-position: 100px 100px;
+}
+.bg > p:nth-of-type(5) {
+    background-image: url('../image/너구리.jpg');
+    background-size: 100px;
+    
+}
+.bg > p:nth-of-type(6) {
+    background-image: url('../image/너구리.jpg');
+    background-size: 100px;
+    background-repeat: no-repeat;
+    
+}
+.bg > p:nth-of-type(7) {
+    background-image: url('../image/너구리.jpg');
+    background-attachment: fixed;
+}
+
+/* ================================================================================== */
+

@@ -6,7 +6,8 @@
     <title>Document</title>
     <style>
         body {
-            width: 1000px;
+            width: 100%;
+            max-width: 1000px;
             margin: 100px auto;
         }
         body > div {
@@ -18,6 +19,7 @@
             font-size: 2rem;
         }
         hr { display: none; }
+        ul, li { margin: 0; padding: 0; list-style: none; }
     </style>
 </head>
 <body>
@@ -216,5 +218,207 @@
             </a>
         </p>
     </div>
+
+    <!-- ========== video / audio ========== -->
+
+    <!-- 태그 설명
+        autoplay                               : 자동재생
+        loop                                   : 무한재생
+        controls                               : 영상 컨트롤러
+        muted                                  : 영상 음소거
+        poster: "url"                          : 영상 썸네일
+        preload: "none" | "auto" | "metadata"  : 영상을 재생시켜야 로드함 | 영상을 자동으로 로드함 | 영상 정보만 로드하고 재생시켜야 영상을 로드함
+    -->
+    <div>
+        <h2>video / audio</h2>
+        <div>
+            <!-- [ autoplay | loop | controls | mute | poster | preload ] -->
+            <video width="100%" preload="metadata" poster="./image/너구리.jpg" controls loop>
+                <source src="./image/video_cat.mp4" type="video/mp4">
+            </video>
+
+            <!-- [ autoplay | loop | controls | preload ] -->
+            <audio controls autoplay>
+                <source src="./image/audio_ex.mp3" type="video/mp3">
+            </audio>
+        </div>
+    </div>
+
+    <!-- ========== dl / dt / dd ========== -->
+
+    <div>
+        <h2>dl, dt, dd</h2>
+        <div>
+            <dl>
+                <div style="display: flex;">
+                    <dt>이름 :</dt>
+                    <dd>홍길동</dd>
+                </div>
+                
+                <div style="display: flex;">
+                    <dt>나이 :</dt>
+                    <dd>500</dd>
+                </div>
+                
+                <div style="display: flex;">
+                    <dt>주소 :</dt>
+                    <dd>전라남도 남원시...</dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+
+    <!-- ========== form ========== -->
+
+    <div>
+        <h2>form</h2>
+        <div>
+            <fieldset>
+                <legend>사용자 정보 입력 받기</legend>
+
+                <input type="text">
+
+                <select>
+                    <optgroup label="수도권">
+                        <option>선택안함</option>
+                        <option>서울</option>
+                        <option>인천</option>
+                        <option>경기</option>
+                    </optgroup>
+                </select>
+
+                <br><br>
+                
+                <!-- [ cols (가로) | rows (글자의 줄 수)) ] -->
+                <textarea cols="23" rows="5">이용약관 또는 게시판 내용 입력</textarea>
+
+                <button>확인</button>
+            </fieldset>
+
+            <!-- =========== input =========== -->
+
+            <fieldset>
+                <legend>input type</legend>
+
+                <form action="http://dbcut.com">    <!-- action="" : 저장 버튼을 누르면 이동할 경로 -->
+                    <ul>
+                        <li>
+                            <!-- type=""의 값들
+                                text            : 글자를 적을 수 있음
+                                password        : 글자를 적으면 가림효과
+                                submit          : 제출(저장) 버튼
+                                tell            : 전화번호 입력창
+                                email           : 이메일 입력창 / 키패드에 @, .com 표시 
+                                search          : 검색창 / box끝에 x표시 / 키패드 ↵ 키가 이동으로 변경
+                                url             : url 입력창
+                                number          : 숫자 선택창 [ min="" | max="" ] 값을 지정할 수 있음
+                                date            : 날짜 선택창
+                                month           : 달 선택창
+                                week            : 주 선택창
+                                time            : 시간 선택창
+                                datetime-local  : 날짜, 시간 선택창
+                                color           : 색상 선택 버튼
+                                file            : 파일 선택 버튼
+                                checkbox        : 사각형 체크 박스 (체크해제 가능)
+                                radio           : 원형 체크 박스 (name을 같게하면 하나만 체크 가능 / 체크해제 불가능)
+                                reset           : 리셋(취소) 버튼
+                            -->
+
+                            <!-- input의 명령어들
+                                name=""         : 그 창의 이름
+                                maxlength=""    : 최대 글자수
+                                value=""        : 초기값
+                                placeholder=""  : 배경으로 글자가 들어감 (무엇을 적을지 가이드)
+                                disabled        : 비활성화
+                                required        : 입력 하지않고 제출하면 경고 메시지를 표시
+                            -->
+
+                            <input 
+                                type="text" 
+                                name="id"
+                                maxlength="3"
+                                placeholder="아이디"
+                                disabled
+                                required
+                            >
+                        </li>
+
+                        <li><input type="password" name="pw" placeholder="비밀번호" required></li>
+                        <li><input type="tell" name="tell" placeholder="전화번호" required></li>
+                        <li><input type="email" name="email" placeholder="이메일" required></li>
+                        <li><input type="search" name="search" placeholder="검색" required></li>
+                        <li><input type="url" name="url" placeholder="url" required></li>
+                        <li><input type="number" name="number" min="1" max="5" value="1"></li>
+                        <li>
+                            <input type="date" name="date" value="2026-01-22">
+                            <input type="month" name="month" value="2026-01">
+                            <input type="week" name="week" value="2026-W23">
+                            <input type="time" name="time" value="18:04">
+                            <input type="datetime-local" name="datetime" value="2026-01-22 18:06">
+                        </li>
+                        <li><input type="color" name="color" value="#ffffff"></li>
+                        <li><input type="file" name="file"></li>
+                        <li><input type="checkbox" name="checkbox">동의</li>
+                        <li>
+                            <input type="radio" name="g">남성
+                            <input type="radio" name="g">여성
+                        </li>
+
+                        <li>
+                            <input type="submit" value="저장">
+                            <input type="reset" value="취소">
+                        </li>
+                    </ul>
+                </form>
+            </fieldset>
+
+            <fieldset>
+                <legend>체크박스 활용</legend>
+                <div>
+                    <label for="n">이름</label>
+                    <input type="text" id="n">
+                    <!-- label의 for값과 input의 id값을 일치시키면 label을 눌러도 활성화 됨 -->
+                </div>
+
+                <!-- =========== on / off 스위치 ========== -->
+                <div class="ex">
+                    <input type="checkbox" id="ex">
+                    <br>
+                    <label for="ex">
+                        <span></span>
+                    </label>
+
+                    <style>
+                        .ex input { display: none; }        /* 숨기기 */
+                        .ex input:checked ~ label {         /* + 는 바로 밑에 있는 형제만 가리킴 | ~ 형제요소들 중에서 찾아냄 (둘 다 위쪽으로는 못찾음 아래로만!) */
+                            background-color: green;
+                        }
+                        .ex label {
+                            width: 40px; height: 20px;
+                            background-color: gray;
+                            border-radius: 15px;
+                            display: inline-block;
+                            transition: 0.2s;
+                        }
+                        .ex label span {
+                            width: 18px; height: 18px;
+                            border-radius: 100%;
+                            background-color: white;
+                            display: inline-block;
+                            margin: 1px 0 0 1px;
+                            transition: 0.2s;
+                        }
+                        .ex input:checked ~ label span {
+                            margin: 1px 0 0 21px;
+                        }
+                    </style>
+                </div>
+
+
+            </fieldset>
+        </div>
+    </div>
+
+
 </body>
 </html>

@@ -12,7 +12,7 @@ article > h2 {
     text-transform: capitalize;
     padding: 20px 0;
 }
-article > div { width: 40%; }
+article > div { width: 50%; }
 article > div > img { width: 100%; }
 
 .ani-transition > img {
@@ -161,8 +161,30 @@ aside {
 }
 .ani-cube > div > p:nth-of-type(4) {
     transform: rotateY(270deg) translateZ(150px);
+    transition: linear;
 }
 @keyframes cube {
     0% { transform: perspective(1000px) rotateY(0deg); }
     100% { transform: perspective(1000px) rotateY(360deg); }
 }
+
+/* ani-svg */   
+.ani-svg svg path { 
+    fill: transparent;      /* transparent : 투명색 */
+    stroke: black;
+    stroke-width: 1px;
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 200px;
+    animation: svg 2s forwards;
+}
+@keyframes svg { 100% { stroke-dashoffset: 0px; } }
+
+.ani-sign svg {
+    fill: transparent;
+    stroke: black;
+    stroke-width: 3px;
+    stroke-dasharray: 3000px;
+    stroke-dashoffset: 3000px;
+    animation: sign 3s forwards;
+}
+@keyframes sign { 100% { stroke-dashoffset: 0px; } }

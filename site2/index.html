@@ -26,23 +26,23 @@
     </header>
 
     <main>
-        <div class="spot">
+        <div class="spot" id="0">
             <div class="box">
-                <div>
+                <a href="#">
                     <p>CHECK IN</p>
                     <div>
                         <b>2024. 02. 07</b>
                         <small>(수)</small>
                     </div>
-                </div>
+                </a>
 
-                <div>
+                <a href="#">
                     <p>CHECK OUT</p>
                     <div>
                         <b>2024. 05. 05</b>
                         <small>(일)</small>
                     </div>
-                </div>
+                </a>
 
                 <div class="openmenu">
                     <p>ROOM</p>
@@ -69,31 +69,28 @@
                 </div>
 
                 <a class="search" href="#"><img src="./img/icon_search.svg" alt=""></a>
-
-                
             </div>
         </div>
 
-        <section class="room">
+        <section class="room" id="2">
             <div class="title">
                 <div>
                     <small>ROOM</small>
                     <h2>객실안내</h2>
                 </div>
-                <a href="#">VIEW MORE</a>
+                <a class="viewmore" href="#">VIEW MORE</a>
             </div>
 
             <div class="contents">
-                <p class="image"><img src="./img/img_room-203.jpg" alt=""></p>
-                <figure>
-                    <p class="image"><img src="./img/img_room-201.jpg" alt=""></p>
-                    <figcaption>
+                <a class="side" href="#"><img src="./img/img_room-203.jpg" alt=""></a>
+                <a class="mid" href="#">
+                    <p class="mainimg"><img src="./img/img_room-201.jpg" alt=""></p>
+                    <div>
                         <b>LOVE YOU #201</b>
                         <p>언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.</p>
-                    </figcaption>
-                </figure>
-                <p class="image"><img src="./img/img_room-202.jpg" alt=""></p>
-
+                    </div>
+                </a>
+                <a class="side" href="#"><img src="./img/img_room-202.jpg" alt=""></a>
             </div>
 
             <div class="bar-btn">
@@ -110,23 +107,56 @@
             </div>
         </section>
 
-        <section class="faciliries">
+        <section class="faciliries" id="3">
             <div class="title">
                 <div>
                     <small>FACILITIES</small>
                     <h2>시설안내</h2>
                 </div>
-                <a href="#">VIEW MORE</a>
+                <a class="viewmore" href="#">VIEW MORE</a>
+            </div>
+
+            <div class="contents2">
+                <a class="imgbox" href="#">
+                    SWIMMING POOL
+                    <div></div>
+                </a>
+
+                <a class="imgbox" href="#">
+                    ROOF TOP
+                    <div></div>
+                </a>
+                
+                <a class="imgbox" href="#">
+                    BARBECUE
+                    <div></div>
+                </a>
             </div>
         </section>
 
-        <section class="around">
-            <div class="title">
-                <div>
-                    <small>AROUND SPOT</small>
-                    <h2>주변안내</h2>
+        <section class="around" id="4">
+            <div class="top">
+                <div class="title-2">
+                    <div>
+                        <small>AROUND SPOT</small>
+                        <h2>주변안내</h2>
+                    </div>
+                    <p>
+                        다온펜션 주변에는 남이섬, 아침고요수목원, 쁘띠프랑스 등<br>
+                        다양한 볼거리와 힐링 스팟이 위치하고있습니다. <br>
+                        다온에서의 즐거운 추억을 만들어보세요!
+                    </p>
                 </div>
-                <a href="#">VIEW MORE</a>
+
+                <p><img src="./img/img_around-3.jpg" alt=""></p>
+            </div>
+
+            <div class="bottom">
+                <p>
+                    <img src="./img/img_around-2.jpg" alt="">
+                    <a class="viewmore" href="#">VIEW MORE</a>
+                </p>
+                <p><img src="./img/img_around-1.jpg" alt=""></p>
             </div>
         </section>
 
@@ -136,7 +166,55 @@
                     <small>EVENT</small>
                     <h2>이벤트</h2>
                 </div>
-                <a href="#">VIEW MORE</a>
+                <a class="viewmore" href="#">VIEW MORE</a>
+            </div>
+
+            <div class="contents">
+                <a class="box" href="#">
+                    <img src="./img/img_event-sale.jpg" alt="">
+                    <p>EVENT</p>
+                    <div>
+                        <p>성수기 할인이벤트</p>
+                        <p>2024. 06. 24 ~ 2024. 06. 24</p>
+                    </div>
+                </a>
+
+                <a class="box" href="#">
+                    <img src="./img/img_event-insta.jpg" alt="">
+                    <p>EVENT</p>
+                    <div>
+                        <p>
+                            인플루언서에게 제공되는<br>
+                            호캉스&힐링 패키지
+                        </p>
+                        <p>2024. 06. 24 ~ 2024. 06. 24</p>
+                    </div>
+                </a>
+
+                <a class="box" href="#">
+                    <img src="./img/img_event-review.jpg" alt="">
+                    <p>EVENT</p>
+                    <div>
+                        <p>
+                            리뷰 이벤트! 추첨을 통해 <br>
+                            총 50분께 스타벅스...
+                        </p>
+                        <p>2024. 06. 24 ~ 2024. 06. 24</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bar-btn">
+                <div class="bar">
+                    <p><img src="./img/icon_bar1.svg" alt=""></p>
+                    <p><img src="./img/icon_bar2.svg" alt=""></p>
+                    <p><img src="./img/icon_bar2.svg" alt=""></p>
+                </div>
+
+                <div class="btn">
+                    <a href="#"><img src="./img/icon_beforebtn.svg" alt=""></a>
+                    <a href="#"><img src="./img/icon_nextbtn.svg" alt=""></a>
+                </div>
             </div>
         </section>
 
@@ -146,13 +224,109 @@
                     <small>CONTECT</small>
                     <h2>오시는 길</h2>
                 </div>
-                <a href="#">VIEW MORE</a>
+                <a class="viewmore" href="#">VIEW MORE</a>
+            </div>
+
+            <!-- kakao map -->
+            <div id="daumRoughmapContainer1768881581524" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+            <script charset="UTF-8">
+            	new daum.roughmap.Lander({
+            		"timestamp" : "1768881581524",
+            		"key" : "fx9tzuhkei7",
+            		"mapWidth" : "1400",
+            		"mapHeight" : "400"
+            	}).render();
+            </script>
+
+            <div class="details">
+                <div class="left">
+                    <div class="btn">
+                        <a href="#">위치안내</a>
+                        <a href="#">대중교통</a>
+                    </div>
+                    <div class="text">
+                        <div>
+                            <img src="./img/icon_location.svg" alt="">
+                            경기도 가평군 가평읍 경반안로 357-187
+                        </div>
+                        <div class="bottom">
+                            <div>
+                                <img src="./img/icon_phone.svg" alt="">
+                                031-581-0662
+                            </div>
+                            <div>
+                                <img src="./img/icon_mail.svg" alt="">
+                                daonpention@daon.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <a class="btn" href="#">
+                        <img src="./img/icon_car.svg" alt="">
+                        픽업서비스
+                    </a>
+                    <div class="text">
+                        <div>
+                            <img src="./img/icon_check.svg" alt="">
+                            조은마트에서 <span>3만원 이상</span> 결제 후 영수증 지참 시, <span>무료 픽업서비스 제공</span>
+                        </div>
+                        <div>
+                            <img src="./img/icon_phone.svg" alt="">
+                            010-3923-0662
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
+        <div>
+            <div class="logo">
+                <img src="./img/icon_logo-white.svg" alt="">
+                <div>
+                    <p>이용약관</p>
+                    <p>개인정보처리방침</p>
+                </div>
+            </div>
 
+            <div class="text fir">
+                <div>
+                    <span>주소</span>
+                    경기도 가평군 가평읍 경반안로 357-187 (경반리 583-34)
+                </div>
+                <div>
+                    <span>대표</span>
+                    박춘하
+                </div>
+                <div>
+                    <span>사업자등록번호</span>
+                    286-11-00158
+                </div>
+            </div>
+
+            <div class="text sec">
+                <div>
+                    <span>전화번호</span>
+                    031-581-0662
+                </div>
+                <div>
+                    <span>E-mail</span>
+                    daonpention@daon.com
+                </div>
+            </div>
+
+            <div class="text thr">
+                <p>Copy@ 2015 다온펜션 All Rights Reserved</p>
+                <div class="icons">
+                    <a class="iconbox" href="#"><img src="./img/icon_Instagram.svg" alt=""></a>
+                    <a class="iconbox" href="#"><img src="./img/icon_facebook.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

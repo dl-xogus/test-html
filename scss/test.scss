@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(./reset.css);
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 1200px;
+    height: 785px;
+    margin: 0 auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../image/img_ex2.jpg) center center / cover no-repeat;
+    color: white;
+    padding: 0 60px;
+
+    .title {
+        height: 70%;
+        @include flex;
+        text-align: center;
+        flex-direction: column;
+
+        small { font-size: 24px; }
+
+        b { font-size: 45px; }
+    }
+
+    .contents {
+        height: 30%;
+        @include flex;
+        column-gap: 15%;
+        border-top: 1px solid white;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            
+            &::before {
+                font-family: 'Material Icons';
+                font-size: 50px;
+            }
+            &:nth-child(1)::before { content: 'apartment'; }
+            &:nth-child(2)::before { content: 'home'; }
+            &:nth-child(3)::before { content: 'code'; }
+
+            span {
+                b { font-size: 30px; }
+
+                em { font-size: 16px; }
+            }
+        }
+    }
+}
+
+/* @media 는 항상 코드의 아래에 존재해야함 */
+@media screen and (max-width: 1200px) {
+    .box { width: 100%; padding: 0 30px; }
+}
+
+@media screen and (max-width: 480px) {
+    .box {
+        height: 1200px;
+
+        .contents {
+            flex-direction: column;
+            row-gap: 10%;
+        }
+    }
+}

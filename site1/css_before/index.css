@@ -1,0 +1,46 @@
+@import url(./reset.css);
+@import url(./common.css);
+
+
+/* about============================================ */
+.about .contents > figure { transition: 0.3s; }
+.about .contents > figure:hover {
+    background-color: #eee;
+    border-radius: 30px;
+}
+.about .contents > figure > p {
+    background-color: #593CFB;
+    width: 160px; height: 160px;
+    border-radius: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* line-height: 160px;                 height의 크기만큼 줄간격을 잡아주면 아이콘이 중앙으로 오게 됨 (flex를 안쓰고 중앙으로 옮기는 방법(1줄짜리만 가능함)(p의 크기가 달라지면 중앙이 아니게 됨)) */
+    transition: 0.3s;
+}
+.about .contents > figure:hover > p {
+    background-color: #fb3c3c;
+    border-radius: 15%;
+}
+
+/* portfolio======================================== */
+.portfolio { background-color: #D9D9D9; }
+.portfolio .contents { margin: 0 20px; }
+.portfolio .contents > figure > p { overflow: hidden; }
+.portfolio .contents > figure > p > img {
+    width: 100%;
+    transition: 0.3s;
+}
+.portfolio .contents > figure:hover > p > img { transform: scale(1.2); }
+
+/* contect========================================== */
+.contect { background-color: #333333; }
+.contect .title > h2 { color: white; }
+.contect .title > p { color: white; }
+
+/* 카카오 지도 */
+.root_daum_roughmap .cont .section .address .tit { color: white; }
+.root_daum_roughmap .cont .section .address .txt { color: white; }
+.root_daum_roughmap .cont .section .phone .tit { color: white; }
+.root_daum_roughmap .cont .section .phone .txt { color: white; }

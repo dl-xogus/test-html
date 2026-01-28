@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./scss/index.css">
 </head>
 <body>
     <!-- [ header | main | footer | section ] 태그들은 div와 기능은 같음 -->
     <header>
-        <div>
+        <div class="header-box">
             <h1><a href="#0">FIGMA</a></h1>
             <nav>
                 <a href="#1">ABOUT</a>
                 <a href="#2">PORTFOLIO</a>
                 <a href="#3">CONTECT US</a>
             </nav>
+            <div class="mobile-menu">
+                메뉴
+            </div>
         </div>
     </header>
     
@@ -37,7 +40,7 @@
             
             <div class="contents">
                 <figure>                                <!-- 이미지와 내용이 있는 묶음 (컨텐츠 하위) -->
-                    <p><img src="./imgs/ic_profile.svg" alt="프로필 아이콘" title="프로필 아이콘"></p>      <!-- [ title="프로필 아이콘" ]은 웹에서 마우스를 올리면 "프로필 아이콘"이라고 뜨게 만들어줌 -->
+                    <p class="profile"><img src="./imgs/ic_profile.svg" alt="프로필 아이콘" title="프로필 아이콘"></p>      <!-- [ title="프로필 아이콘" ]은 웹에서 마우스를 올리면 "프로필 아이콘"이라고 뜨게 만들어줌 -->
                     <figcaption>                        <!-- figure안에 있는 내용태그 -->
                         <b>PROFILE</b>
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsumdolor sit amet</p>
@@ -45,7 +48,7 @@
                 </figure>
 
                 <figure>
-                    <p><img src="./imgs/ic_profile.svg" alt="프로필 아이콘" title="프로필 아이콘"></p>
+                    <p class="profile"><img src="./imgs/ic_profile.svg" alt="프로필 아이콘" title="프로필 아이콘"></p>
                     <figcaption>
                         <b>PROFILE</b>
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsumdolor sit amet</p>
@@ -53,7 +56,7 @@
                 </figure>
                 
                 <figure>
-                    <p><img src="./imgs/ic_profile.svg" alt="프로필 아이콘" title="프로필 아이콘"></p>
+                    <p class="profile"><img src="./imgs/ic_profile.svg" alt="프로필 아이콘" title="프로필 아이콘"></p>
                     <figcaption>
                         <b>PROFILE</b>
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsumdolor sit amet</p>
@@ -128,15 +131,21 @@
             </div>
             
             <!-- 카카오 지도 -->
-            <div id="daumRoughmapContainer1768881581524" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+            <div class="map" id="map">
+                <div id="daumRoughmapContainer1768881581524" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+            </div>
             <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
             <script charset="UTF-8">
-            	new daum.roughmap.Lander({
-            		"timestamp" : "1768881581524",
-            		"key" : "fx9tzuhkei7",
-            		"mapWidth" : "1300",
-            		"mapHeight" : "500"
-            	}).render();
+                window.addEventListener("DOMContentLoaded", function () {
+                    const map = document.getElementById("map");
+
+                    new daum.roughmap.Lander({
+                        "timestamp" : "1768881581524",
+                        "key" : "fx9tzuhkei7",
+                        "mapWidth" : "100%",
+                        "mapHeight" : "360"
+                    }).render();
+                });
             </script>
         </section>
     </main>

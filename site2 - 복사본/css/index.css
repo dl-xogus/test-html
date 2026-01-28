@@ -1,0 +1,265 @@
+@import url('./reset.css');
+@import url('./common.css');
+
+/* ===== spot ===== */
+.spot {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/img_spot-main.jpg') 0 0 / cover no-repeat;
+    position: relative;
+}
+.spot .box {
+    width: 100%;
+    max-width: 1400px;
+    position: absolute;
+    left: 50%; top: 70%;
+    transform: translate(-50%, 0);
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    padding: 32px 47px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    gap: 75px;
+}
+.spot .box > a { color: white; }
+.spot .box > a > div > b {font-size: 32px; }
+.spot .box > a > div > small { font-size: 20px; }
+.spot .box > div > p { font-size: 20px; }
+.spot .box .openmenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.spot .box .openmenu > a {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+.spot .box .openmenu > a > img { padding-left: 90px; }
+.spot .box .search {
+    width: 80px; height: 80px;
+    border: 1px solid white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== room ===== */
+.room .contents {
+    width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.room .contents img { border-radius: 20px; }
+.room .contents .mid { position: relative; }
+.room .contents .mainimg {
+    width: 1400px;  height: 755px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.room .contents .mid img {
+    width: 100%;
+    transition: 0.3s;
+}
+.room .contents .mid:hover img { transform: scale(1.05); }
+.room .contents .mid > div {
+    position: absolute;
+    left: 5%; bottom: 5%;
+}
+.room .contents .mid > div > b {
+    font-size: 40px;
+    color: white;
+}
+.room .contents .mid > div > p {
+    font-size: 24px;
+    color: white;
+}
+
+/* ===== facilities ===== */
+.faciliries .contents2 {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+}
+.faciliries .contents2 .imgbox {
+    margin: 0;
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 800px;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/img_facilities-1.jpg') center center / cover no-repeat;
+    padding: 72px 64px;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.faciliries .contents2 .imgbox:hover { flex-grow: 2; }
+.faciliries .contents2 .imgbox:nth-of-type(2) { background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/img_facilities-2.jpg') center center / cover no-repeat; }
+.faciliries .contents2 .imgbox:nth-of-type(3) { background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/img_facilities-3.jpg') center center / cover no-repeat; }
+
+.faciliries .contents2 .imgbox > div {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 2px;
+    margin-top: 16px;
+    width: 100%;
+}
+
+/* ===== around ===== */
+.around .top{
+    display: flex;
+}
+.around .title-2 {
+    width: 100%;
+    max-width: 1400px;
+    padding-bottom: 64px;
+}
+.around .title-2 > div { padding-bottom: 80px; }
+.around .title-2 > div > small { font-size: 24px; }
+.around .title-2 > div > h2 { font-size: 64px; }
+.around .title-2 > p { font-size: 20px; }
+
+.around img { border-radius: 20px; }
+.around a { font-size: 20px; }
+.around a::after {
+    content: url('../img/icon_right.svg');
+    padding-left: 10px;
+}
+
+.around p > img { transition: 0.3s; }
+.around p:hover > img { transform: scale(0.97); }
+
+.around .top { width: 1400px; }
+.around .top > p { padding-bottom: 20px; }
+.around .bottom {
+    width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.around .bottom > p {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* ===== event ===== */
+.event .contents {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+}
+.event .contents .box {
+    position: relative;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.event .contents .box img {
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px 4px rgba(0, 0, 0, 0.1);
+}
+.event .contents .box:hover { transform: scale(0.97); }
+.event .contents .box > p {
+    position: absolute;
+    left: 24px; top: 24px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+.event .contents .box > div {
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 50%; height: 160px;
+    background-color: white;
+    border-radius: 0 20px 0 20px;
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.event .contents .box > div > p:nth-of-type(1) {
+    font-size: 20px;
+}
+.event .contents .box > div > p:nth-of-type(2) {
+    font-size: 16px;
+    color: #7a7a7a;
+}
+
+/* ===== contect ===== */
+.contect .details {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.contect .details .left { width: 50%; }
+.contect .details .right { width: 50%; }
+
+.contect .details .btn { margin-bottom: 40px; }
+
+.contect .details .text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contect .details .left .btn {
+    display: flex;
+    background-color: #efefef;
+    border-radius: 8px;
+    color: #afafaf;
+    width: 226px; height: 64px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 8px;
+}
+
+.contect .details .left .btn > a {
+    color: #afafaf;
+    width: 103px; height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+.contect .details .left .btn > a:hover {
+    color: #2f2f2f;
+    background-color: white;
+}
+.contect .details .left .text .bottom {
+    display: flex;
+    gap: 73px;
+}
+
+.contect .details .right .btn {
+    display: inline-block;
+    width: 180px; height: 64px;
+    background-color: #2f2f2f;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 64px;
+    color: white;
+    font-size: 20px;
+    transition: 0.2s;
+}
+.contect .details .right .btn:hover { background-color: rgb(91, 72, 255); }
+
+.contect .details .right .text span { font-weight: bold; }

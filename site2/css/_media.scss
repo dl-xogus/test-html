@@ -1,0 +1,167 @@
+$wid : 480px;
+
+@media (max-width: 480px) {
+
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    //                          header
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    header>div {
+        margin: 0;
+        max-width: $wid;
+        padding: 0 10px;
+    }
+
+    header>div>nav { display: none; }
+
+    header>div .burger { display: block !important; }
+
+    .title { padding: 0 20px 64px; }
+    .title > div > small { font-size: 3vw; }
+    .title > div > h2 { font-size: 7vw; }
+    .title > a { font-size: 3vw; }
+    .title > a::after { font-size: 5vw; }
+
+    .bar-btn { padding: 20px; }
+
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    //                           spot
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    .spot .box {
+        max-width: 90%;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        transform: translateX(-50%);
+    }
+
+    .spot .box .date>a>div>b {
+        font-size: 20px;
+    }
+
+    .spot .box .date>a>div>small {
+        font-size: 14px;
+    }
+
+    .spot .box .openmenu {
+        align-self: center;
+    }
+
+    .spot .box .openmenu>a {
+        font-size: 20px;
+    }
+
+    .spot .box .openmenu>a>img {
+        padding-left: 20px;
+    }
+
+    .spot .box .search {
+        width: 56px;
+        height: 56px;
+        align-self: flex-end;
+    }
+
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    //                           room
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    .room .contents {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 16px;
+    }
+
+    .room .contents .mainimg {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9; // 가로 세로 비율
+    }
+
+    .room .contents .side {
+        display: none;
+    }
+
+    .room .contents .mid>div>b {
+        font-size: 22px;
+    }
+
+    .room .contents .mid>div>p {
+        font-size: 14px;
+    }
+
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    //                        faciliries
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    .faciliries .contents2 {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 1000px;
+    }
+
+    .faciliries .contents2 .imgbox {
+        padding: 30px;
+    }
+
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    //                          around
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    .around .top {
+        flex-direction: column;
+    }
+    .around .top .title-2 > p {
+        font-size: 3vw;
+        padding: 0 20px;
+    }
+    .around .top > p { width: 100%; }
+    .around .top > p > img { width: 100%; }
+
+    .around .bottom {
+        flex-direction: column;
+        max-width: $wid;
+    }
+    .around .bottom > p:nth-child(1) > a { display: none; }
+    
+    .around .bottom > P:nth-child(1) {max-width: $wid;}
+    .around .bottom > P:nth-child(1) > img {width: 100%;}
+
+    .around .bottom > P:nth-child(2) {max-width: $wid;}
+    .around .bottom > P:nth-child(2) > img {width: 100%;}
+
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    //                          event
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    .event .contents {
+        overflow: hidden;
+    }
+    .event .contents .box {
+        width: 100%;
+        max-width: $wid;
+        height: auto;
+        aspect-ratio: 1;
+    }
+    .event .contents .box > img {width: 100%; max-width: $wid;}
+    .event .contents .next {display: none;}
+
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    //                         contect
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    .contect .left { padding: 0 10px;}
+    .contect .right { padding: 0 10px; }
+    .contect .text {font-size: 2.5vw;}
+    .contect .left .bottom {
+        flex-direction: column;
+        gap: 20px !important;
+    }
+
+    .contect .btn {
+        width: 100% !important;
+    }
+    
+    .map { max-width: $wid; }
+
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    //                         footer
+    //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+}

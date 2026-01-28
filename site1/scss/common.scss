@@ -1,0 +1,129 @@
+$wid : 1300px;
+
+html {
+    font-size: 16px;
+
+    body {
+        color: #555;
+        text-align: center;
+
+        //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //                      header
+        //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+            width: 100%;
+            height: 60px;
+            position: fixed;
+            display: flex;
+            z-index: 9999px;
+
+            .header-box {
+                width: 100%;
+                max-width: $wid;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0 auto;
+
+                h1 {
+                    font-size: 30px;
+
+                    a {
+                        color: white;
+                        padding: 0 20px;
+                        display: inline-block;
+                        text-shadow: 0 4px 7px black;
+                    }
+                }
+
+                nav {
+                    font-size: 20px;
+
+                    a {
+                        color: white;
+                        padding: 0 20px;
+                        display: inline-block;
+                        text-shadow: 0px 4px 7px black;
+                        transition: 0.3s;
+
+                        &:hover {
+                            font-weight: bold;
+                        }
+                    }
+
+                }
+                
+                .mobile-menu {
+                    color: white;
+                    padding: 0 20px;
+                    display: none;
+                    // opacity: 0;
+                    // visibility: visible;    /* [ visible(보임) | hidden(감춤) ] */
+                }
+            }
+        }
+
+        /* 
+            1. 발생문제
+            ㄴ 모든 컨텐츠를 화면에 중앙 정렬
+            2. 해결방법
+            ㄴ 모든 컨텐츠를 div로 묶음
+            ㄴ div 부모 태그에 flex명령
+        */
+
+        main {
+            section {
+                padding: 100px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: 0.2s;
+
+                .title {
+                    padding-bottom: 70px;
+
+                    h2 {
+                        color: black;
+                        font-size: 40px;
+                        text-transform: uppercase;
+                        /* 대문자로 변환 */
+                    }
+
+                    p {
+                        padding-top: 10px;
+                        color: #555;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .contents {
+                    max-width: $wid;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 20px;
+
+                    figure {
+                        max-width: 420px;
+                        padding: 20px 0;
+                        transition: 0.3s;
+
+                        figcaption {
+                            padding: 0 20px;
+
+                            b {
+                                text-transform: uppercase;
+                                color: black;
+                                font-size: 1.5rem;
+                                margin: 20px 0 10px;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

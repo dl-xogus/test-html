@@ -1,0 +1,153 @@
+body {
+    color: #2f2f2f;
+    overflow-x: hidden;
+}
+
+/* ===== header ===== */
+header {
+    width: 100%; height: 80px;
+    background-color: white;
+    display: flex;
+    position: fixed;
+    z-index: 9999;
+}
+header > div {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > div > nav {
+    display: flex;
+    font-size: 20px;
+}
+header > div > nav > a {
+    color: #2f2f2f;
+    padding: 0 30px;
+}
+header > div > nav a { transition: 0.3s; }
+header > div > nav a:hover { font-weight: bold; }
+
+header > div > nav .login {
+    display: flex;
+    gap: 20px;
+    padding-left: 30px;
+}
+header > div > nav .login > a{
+    color: #2f2f2f;
+}
+
+/* ===== main ===== */
+section {
+    padding: 160px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewmore { transition: 0.3s; }
+.viewmore:hover { font-weight: bold; }
+
+.title {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 64px;
+}
+.title > div > small { font-size: 24px; }
+.title > div > h2 { font-size: 64px; }
+.title > a { font-size: 20px; }
+.title > a::after {
+    content: url('../img/icon_right.svg');
+    padding-left: 10px;
+}
+
+.bar-btn {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    vertical-align: middle;
+    justify-content: space-between;
+    padding-top: 24px;
+}
+.bar-btn .bar {
+    display: flex;
+    align-items: center;
+}
+.bar-btn .bar > p:nth-of-type(1) { padding-right: 10px; }
+.bar-btn .bar > p:nth-of-type(2) { padding-right: 10px; }
+
+.bar-btn .btn {
+    display: flex;
+    gap: 7px;
+}
+.bar-btn .btn > a {
+    border-radius: 8px;
+    width: 60px; height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bar-btn .btn > a:nth-of-type(1) { border: 1px solid #afafaf; }
+.bar-btn .btn > a:nth-of-type(2) { border: 1px solid #2f2f2f; }
+
+/* ===== footer ===== */
+footer {
+    width: 100%;
+    background-color: #666666;
+    color: white;
+    font-size: 20px;
+    padding: 200px 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer > div {
+    width: 100%;
+    max-width: 1400px;
+}
+
+footer span {
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+footer .logo {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 100px;
+}
+footer .logo > img { padding-right: 120px; }
+footer .logo > div {
+    display: flex;
+    justify-content: center;
+}
+footer .logo > div > p:nth-of-type(1)::after {
+    content: '│';
+    padding: 0 24px;
+}
+
+footer > div .text { display: flex; }
+footer > div .fir { padding-bottom: 16px; }
+footer > div .sec { padding-bottom: 64px; }
+footer > div .thr {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+footer > div .thr .icons {
+    display: flex;
+    gap: 12px;
+    
+}
+footer > div .thr .icons .iconbox {
+    width: 40px; height: 40px;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 35px;
+}

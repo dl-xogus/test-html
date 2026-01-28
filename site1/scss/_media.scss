@@ -1,0 +1,27 @@
+@media (max-width: 1300px) {
+    
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+    // 버거메뉴
+    .mobile-menu {display: block;}
+
+    header {
+            div {
+                nav {
+                    display: none;
+                    a {
+                        color: white;
+                        padding: 0 20px;
+                        display: inline-block;
+                        text-shadow: 0px 4px 7px black;
+                        transition: 0.3s;
+
+                        &:hover {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+}

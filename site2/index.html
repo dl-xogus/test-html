@@ -9,7 +9,7 @@
 <body>
     <header>
         <div>
-            <a href="#0"><img src="./img/icon_logo.svg" alt=""></ㅁ>
+            <a class="logo" href="#0"><img src="./img/icon_logo.svg" alt=""></a>
             <nav>
                 <a href="#1">ABOUT</a>
                 <a href="#2">ROOM</a>
@@ -22,53 +22,56 @@
                     <a href="#">회원가입</a>
                 </div>
             </nav>
+            <a class="burger" href="#">menu</a>
         </div>
     </header>
 
     <main>
         <div class="spot" id="0">
             <div class="box">
-                <a href="#">
-                    <p>CHECK IN</p>
-                    <div>
-                        <b>2024. 02. 07</b>
-                        <small>(수)</small>
+                <div class="date">
+                    <a href="#">
+                        <p>CHECK IN</p>
+                        <div>
+                            <b>2024. 02. 07</b>
+                            <small>(수)</small>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <p>CHECK OUT</p>
+                        <div>
+                            <b>2024. 05. 05</b>
+                            <small>(일)</small>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="menus">
+                    <div class="openmenu">
+                        <p>ROOM</p>
+                        <a href="#">
+                            1
+                            <img src="./img/icon_down.svg" alt="">
+                        </a>
                     </div>
-                </a>
-
-                <a href="#">
-                    <p>CHECK OUT</p>
-                    <div>
-                        <b>2024. 05. 05</b>
-                        <small>(일)</small>
+                    
+                    <div class="openmenu">
+                        <p>ADULT</p>
+                        <a href="#">
+                            1
+                            <img src="./img/icon_down.svg" alt="">
+                        </a>
                     </div>
-                </a>
-
-                <div class="openmenu">
-                    <p>ROOM</p>
-                    <a href="#">
-                        1
-                        <img src="./img/icon_down.svg" alt="">
-                    </a>
+                    
+                    <div class="openmenu">
+                        <p>CHILD</p>
+                        <a href="#">
+                            0
+                            <img src="./img/icon_down.svg" alt="">
+                        </a>
+                    </div>
+                    <a class="search" href="#"><img src="./img/icon_search.svg" alt=""></a>
                 </div>
-                
-                <div class="openmenu adult">
-                    <p>ADULT</p>
-                    <a href="#">
-                        1
-                        <img src="./img/icon_down.svg" alt="">
-                    </a>
-                </div>
-                
-                <div class="openmenu">
-                    <p>CHILD</p>
-                    <a href="#">
-                        
-                        <img src="./img/icon_down.svg" alt="">
-                    </a>
-                </div>
-
-                <a class="search" href="#"><img src="./img/icon_search.svg" alt=""></a>
             </div>
         </div>
 
@@ -137,9 +140,12 @@
         <section class="around" id="4">
             <div class="top">
                 <div class="title-2">
-                    <div>
-                        <small>AROUND SPOT</small>
-                        <h2>주변안내</h2>
+                    <div class="title">
+                        <div>
+                            <small>AROUND SPOT</small>
+                            <h2>주변안내</h2>
+                        </div>
+                        <a class="viewmore" href="#">VIEW MORE</a>
                     </div>
                     <p>
                         다온펜션 주변에는 남이섬, 아침고요수목원, 쁘띠프랑스 등<br>
@@ -179,7 +185,7 @@
                     </div>
                 </a>
 
-                <a class="box" href="#">
+                <a class="box next" href="#">
                     <img src="./img/img_event-insta.jpg" alt="">
                     <p>EVENT</p>
                     <div>
@@ -191,7 +197,7 @@
                     </div>
                 </a>
 
-                <a class="box" href="#">
+                <a class="box next" href="#">
                     <img src="./img/img_event-review.jpg" alt="">
                     <p>EVENT</p>
                     <div>
@@ -228,14 +234,16 @@
             </div>
 
             <!-- kakao map -->
-            <div id="daumRoughmapContainer1768881581524" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+            <div class="map" id="map">
+                <div id="daumRoughmapContainer1768881581524" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+            </div>
             <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
             <script charset="UTF-8">
             	new daum.roughmap.Lander({
             		"timestamp" : "1768881581524",
             		"key" : "fx9tzuhkei7",
-            		"mapWidth" : "1400",
-            		"mapHeight" : "400"
+            		"mapWidth" : "100%",
+            		"mapHeight" : "360"
             	}).render();
             </script>
 
@@ -246,17 +254,15 @@
                         <a href="#">대중교통</a>
                     </div>
                     <div class="text">
-                        <div>
-                            <img src="./img/icon_location.svg" alt="">
+                        <div class="ic location">
                             경기도 가평군 가평읍 경반안로 357-187
                         </div>
-                        <div class="bottom">
-                            <div>
-                                <img src="./img/icon_phone.svg" alt="">
+
+                        <div class="ic bottom">
+                            <div class="phone">
                                 031-581-0662
                             </div>
-                            <div>
-                                <img src="./img/icon_mail.svg" alt="">
+                            <div class="ic mail">
                                 daonpention@daon.com
                             </div>
                         </div>
@@ -264,17 +270,14 @@
                 </div>
 
                 <div class="right">
-                    <a class="btn" href="#">
-                        <img src="./img/icon_car.svg" alt="">
+                    <a class="ic btn" href="#">
                         픽업서비스
                     </a>
                     <div class="text">
-                        <div>
-                            <img src="./img/icon_check.svg" alt="">
-                            조은마트에서 <span>3만원 이상</span> 결제 후 영수증 지참 시, <span>무료 픽업서비스 제공</span>
+                        <div class="ic check">
+                            <p>조은마트에서 <span>3만원 이상</span> 결제 후 영수증 지참 시, <span>무료 픽업서비스 제공</span></p>
                         </div>
-                        <div>
-                            <img src="./img/icon_phone.svg" alt="">
+                        <div class="ic phone">
                             010-3923-0662
                         </div>
                     </div>

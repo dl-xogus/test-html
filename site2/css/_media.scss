@@ -21,6 +21,8 @@ $wid : 480px;
     .title > a { font-size: 3vw; }
     .title > a::after { font-size: 5vw; }
 
+    section { padding: 120px 0; }
+
     .bar-btn { padding: 20px; }
 
     //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -164,4 +166,32 @@ $wid : 480px;
     //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     //                         footer
     //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    footer {
+        padding: 70px 0 30px;
+        font-size: 13px;
+    }
+    footer > div {
+        padding: 0 10px;
+    }
+    footer > div .logo {
+        justify-content: space-between;
+        padding-bottom: 30px;
+    }
+    footer > div .logo > div > p::after {
+        padding: 0 5px !important;
+    }
+    footer > div .logo > img {
+        padding: 0;
+        height: 30px;
+    }
+    footer > div .fir {
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 5px;
+    }
+    footer > div .sec {
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 20px;
+    }
 }

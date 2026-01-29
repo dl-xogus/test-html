@@ -196,6 +196,7 @@ footer > div .text {
 
 footer > div .fir {
   padding-bottom: 16px;
+  gap: 64px;
 }
 
 footer > div .sec {
@@ -697,6 +698,9 @@ footer > div .thr .icons .iconbox {
   .title > a::after {
     font-size: 5vw;
   }
+  section {
+    padding: 120px 0;
+  }
   .bar-btn {
     padding: 20px;
   }
@@ -823,5 +827,33 @@ footer > div .thr .icons .iconbox {
   }
   .map {
     max-width: 480px;
+  }
+  footer {
+    padding: 70px 0 30px;
+    font-size: 13px;
+  }
+  footer > div {
+    padding: 0 10px;
+  }
+  footer > div .logo {
+    justify-content: space-between;
+    padding-bottom: 30px;
+  }
+  footer > div .logo > div > p::after {
+    padding: 0 5px !important;
+  }
+  footer > div .logo > img {
+    padding: 0;
+    height: 30px;
+  }
+  footer > div .fir {
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 5px;
+  }
+  footer > div .sec {
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 20px;
   }
 }/*# sourceMappingURL=index.css.map */
